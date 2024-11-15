@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Encryption</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Encrypt Your Link</h1>
+        <form id="encryptionForm">
+            <div>
+                <label for="link">Enter Link:</label>
+                <input type="url" id="link" placeholder="Enter your link here" required>
+            </div>
+            <div>
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit">Encrypt Link</button>
+        </form>
+
+        <!-- Display generated link and buttons -->
+        <div id="generatedLinkContainer" class="hidden">
+            <div id="generatedLinkBox" class="link-box">
+                <a id="generatedLink" href="#" target="_blank"></a>
+                <button id="copyBtn" onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+    </div>
+    <div class="scrolling-text top">Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi</div>
+    <div class="scrolling-text bottom">Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi</div>
+    <div class="scrolling-text left">.           Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi</div>
+    <div class="scrolling-text right">.          Shashi Shashi Shashi Shashi Shashi Shashi Shashi Shashi</div>
+
+
+    <script src="js/encrypt.js"></script>
+</body>
+
+</html>

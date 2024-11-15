@@ -1,0 +1,253 @@
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            background: linear-gradient(135deg, 
+                #ff7e5f, 
+                #feb47b, 
+                #ff9a8b, 
+                #ff6a00, 
+                #e0c3fc, 
+                #8ec5fc, 
+                #9be15d, 
+                #ffecd2, 
+                #4facfe, 
+                #00f2fe, 
+                #00c6ff, 
+                #0072ff, 
+                #00c6ff, 
+                #0099cc, 
+                #ff00cc
+            );
+            background-size: 400% 400%;
+            animation: gradientMotion 30s ease infinite;
+            overflow: hidden;
+        }
+
+        /* Keyframes to animate the gradient */
+        @keyframes gradientMotion {
+            0% {
+                background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;
+            }
+            25% {
+                background-position: 100% 0%, 0% 100%, 100% 100%, 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%, 0% 0%, 100% 0%, 0% 100%;
+            }
+            75% {
+                background-position: 0% 100%, 100% 0%, 0% 0%, 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0%;
+            }
+        }
+
+        /* Border scrolling effect */
+        .scrolling-text {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            white-space: nowrap;
+        }
+
+        /* Scrolling from top */
+        .top {
+            top: 0;
+            left: 0;
+            width: 100%;
+            animation: scrollTop 12s ease-in-out infinite;
+        }
+
+        /* Scrolling from bottom */
+        .bottom {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            animation: scrollBottom 12s ease-in-out infinite;
+        }
+
+        /* Scrolling from left */
+        .left {
+            top: 0;
+            left: 0;
+            writing-mode: vertical-rl;
+            transform: rotate(90deg);
+            animation: scrollLeft 12s ease-in-out infinite;
+        }
+
+        /* Scrolling from right */
+        .right {
+            top: 0;
+            right: 0;
+            writing-mode: vertical-lr;
+            transform: rotate(-90deg);
+            animation: scrollRight 12s ease-in-out infinite;
+        }
+
+        /* Animations */
+        @keyframes scrollTop {
+            0% {
+                transform: translateX(100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scrollBottom {
+            0% {
+                transform: translateX(100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateY(100%);
+            }
+            50% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateY(100%);
+            }
+            50% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+
+
+
+
+
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 5px solid darkred,;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Hide the generated link container initially */
+.hidden {
+    display: none;
+}
+
+/* Styling for the generated link box */
+.link-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    border: 1px solid #ddd;
+    max-width: 100%;
+}
+
+/* Style for the link inside the box */
+.link-box a {
+    flex-grow: 1;
+    color: #007bff;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.link-box a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the copy button */
+button {
+    margin-left: 10px;
+}
+
+/* Centering buttons next to each other */
+button:first-of-type {
+    margin-right: 10px;
+}
+
+/* Shake effect for the password input */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.invalid {
+    border: 2px solid red; /* Red border for invalid input */
+    animation: shake 0.5s ease; /* Shake animation */
+}
+
+/* Optional: Style for the password input */
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
