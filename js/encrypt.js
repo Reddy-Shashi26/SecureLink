@@ -11,7 +11,7 @@ document.getElementById('encryptionForm').addEventListener('submit', function(ev
     const generatedLinkContainer = document.getElementById('generatedLinkContainer');
     const generatedLinkBox = document.getElementById('generatedLink');
     generatedLinkBox.href = `${window.location.origin}/decrypt.html?data=${encryptedLink}`;
-    generatedLinkBox.textContent = ` ${window.location.origin}/decrypt.html?data=${encryptedLink}`;
+    generatedLinkBox.textContent = ` ${window.location.origin}/SecureLink/decrypt.html?data=${encryptedLink}`;
 
     generatedLinkContainer.classList.remove('hidden');
 });
