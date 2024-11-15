@@ -241,8 +241,8 @@ button:first-of-type {
 }
 
 .invalid {
-    border: 2px solid red; /* Red border for invalid input */
-    animation: shake 0.5s ease; /* Shake animation */
+    border: 3px #ff0000; /* Red border for invalid input */
+    animation: shake 0.8s ease; /* Shake animation */
 }
 
 /* Optional: Style for the password input */
