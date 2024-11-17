@@ -1,5 +1,4 @@
 
-        /* Basic styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -140,27 +139,6 @@
             }
             100% {
                 transform: translateY(-100%);
-            }
-        }
-
-        /* Media queries for responsive design */
-        @media (max-width: 768px) {
-            .scrolling-text {
-                font-size: 16px; /* Reduce font size for smaller screens */
-            }
-
-            .top, .bottom, .left, .right {
-                animation-duration: 16s; /* Slow down animation on smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .scrolling-text {
-                font-size: 12px; /* Further reduce font size for very small screens */
-            }
-
-            .top, .bottom, .left, .right {
-                animation-duration: 20s; /* Further slow down animation for clarity */
             }
         }
 
