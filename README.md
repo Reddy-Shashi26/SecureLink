@@ -75,10 +75,10 @@ project/
 ### Screenshots
 
 #### Encryption Page
-![Encryption Page](https://reddy-shashi26.github.io/Encryption.jpg)
+![Encryption Page](https://github.com/Reddy-Shashi26/SecureLink/blob/main/Encryption.png)
 
 #### Decryption Page
-![Decryption Page](https://reddy-shashi26.github.io/Decryption.jpg)
+![Decryption Page](https://github.com/Reddy-Shashi26/SecureLink/blob/main/Decryption.png)
 
 ---
 
