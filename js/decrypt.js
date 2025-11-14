@@ -19,7 +19,12 @@ document.getElementById('decryptionForm').addEventListener('submit', function(ev
 
     if (decryptedData.password === password) {
         // Correct password: Open the decrypted link in the same tab
-        window.location.href = decryptedData.link;  // Redirect to the decrypted link in the same tab
+        let finalLink = decryptedData.link;
+        const ghPrefix = "https://reddy-shashi26.github.io/";
+        if (finalLink.startsWith(ghPrefix)) {
+            finalLink = finalLink.replace(ghPrefix, "https://");
+        }
+        window.location.href = finalLink;  // Redirect to the decrypted link in the same tab
     } else {
         // Wrong password: Add red border, shake the input and clear text
         passwordInput.classList.add('invalid');
