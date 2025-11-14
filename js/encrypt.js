@@ -1,20 +1,26 @@
 document.getElementById('encryptionForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const link = document.getElementById('link').value;
+    let link = document.getElementById('link').value.trim();
     const password = document.getElementById('password').value;
 
-    // Encrypt the link and password (you can use your encryption logic here)
-    const encryptedLink = btoa(JSON.stringify({ link, password })); // Placeholder encryption
+    // Auto-correct accidental wrong domain
+    link = link.replace("https://reddy-shashi26.github.io/", "");
 
-    // Show the generated link and buttons
+    if (!link.startsWith("http")) {
+        link = "https://" + link;
+    }
+
+    const encryptedLink = btoa(JSON.stringify({ link, password }));
+
     const generatedLinkContainer = document.getElementById('generatedLinkContainer');
     const generatedLinkBox = document.getElementById('generatedLink');
     generatedLinkBox.href = `${window.location.origin}/SecureLink/decrypt.html?data=${encryptedLink}`;
-    generatedLinkBox.textContent = ` ${window.location.origin}/SecureLink/decrypt.html?data=${encryptedLink}`;
+    generatedLinkBox.textContent = `${window.location.origin}/SecureLink/decrypt.html?data=${encryptedLink}`;
 
     generatedLinkContainer.classList.remove('hidden');
 });
+
 
 // Function to copy the link
 function copyLink() {
